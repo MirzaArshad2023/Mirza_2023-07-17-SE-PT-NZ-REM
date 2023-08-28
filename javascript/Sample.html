@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample json fetch promise demonstration</title>
+</head>
+<body>
+    <script>
+        fetch('https://reqres.in/api/users')
+        .then((res)=> res.json())
+        .then(json => document.getElementById('output').innerHTML = JSON.stringify(json, undefined, 2))
+        .finally(()=> document.getElementById('result').innerHTML = "Success")
+    </script>
+    <pre id="output">
+
+    </pre>
+    <span id="result"></span>
+</body>
+</html>
