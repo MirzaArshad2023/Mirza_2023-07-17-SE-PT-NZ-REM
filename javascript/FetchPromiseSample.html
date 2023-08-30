@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Fetch Promise</title>
+</head>
+<body>
+    <script>
+        fetch('https://reqres.in/apiv19/users')
+        .then((Response)=> Response.json())
+        //.then(json=> console.log(json))
+        .then(json => document.getElementById("results").innerHTML= JSON.stringify(json))
+        .catch(error=> console.log(error))        
+        
+        //.catch((error)=> document.getElementById("results").innerHTML)
+    </script>
+    <div>
+        <pre id="results">
+
+        </pre>
+    </div>
+</body>
+</html>
