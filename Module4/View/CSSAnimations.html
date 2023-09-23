@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'ADLaM';
+        }
+        p{
+            font-size: 20px;
+            animation-duration: 10s;
+            font-family: ADLaM;
+            animation-iteration-count: infinite;
+            animation-name: slidein;
+        }
+        @keyframes slidein
+        {
+            from{
+                margin-left: 100%;
+                width: 100%;
+            }
+            50%
+            {
+                color: red;
+                font-size: xx-large;
+                margin-left: 40;
+            }
+            to{
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        .topdownsquare
+        {
+            width: 100px;
+            height: 100px;
+            animation-duration: 1s;
+            animation-name: slidedown;
+            animation-iteration-count: infinite;
+            background-color: blue;
+        }
+        @keyframes slidedown
+        {
+            from{
+                margin-top: 0%;
+
+            }
+            50%{
+                background-color: yellow;
+            }
+            to{
+                margin-top: 20%;
+            }
+        }
+    </style>
+</head> 
+<body>
+    <p>Some paragraph to animate</p>
+    <div class="topdownsquare">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorSample</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <label>First Number</label>
+    <textarea id="x"></textarea>
+    <textarea id="y"></textarea>
+    <button onclick="handleClick()" class="bg-primary text-white">Calculate</button>
+    <label id="result">Results</label>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 bg-primary">one</div>
+                <div class="col-1 bg-info">two</div>
+                <div class="col-8 bg-warning">three</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function handleClick()
+        {
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            alert(x)
+            alert(y)
+            document.getElementById("result").innerText = Calculate(x,y,"abc");
+        }
+        function Calculate(x,y,operator)
+        {
+            alert(x+y);
+            return x + y;
+        }
+    </script>
+</body>
+</html>

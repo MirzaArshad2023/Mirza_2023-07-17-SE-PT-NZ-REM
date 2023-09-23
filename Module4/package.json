@@ -1,0 +1,7 @@
+{
+ "type": "module",
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "moment": "^2.29.4"
+  }
+}

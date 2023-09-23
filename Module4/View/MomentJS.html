@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment JS sample</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div id="SampleDate">
+
+    </div>
+    <script>
+        let datesString = " " + moment().format('MMMM Do YYYY, h:mm:ss a') + "\n " + moment().format('dddd') + "\n " + moment().format("MMM Do YY") + "\n " + moment().format('YYYY [escaped] YYYY') + "\n " + moment().format();
+        document.getElementById("SampleDate").innerText = datesString;
+    </script>
+</body>
+</html>
