@@ -10,6 +10,7 @@ import Weather from './Weather'
 import { UserForm } from './UserForm'
 import LoginForm from './LoginForm'
 import ExplodingBomb from './ExplodingBomb'
+import BigCats from './BigCats'
 function App() {
   //const [count, setCount] = useState(0)
   const trainerName = 'Mirza'
@@ -22,6 +23,7 @@ function App() {
       {/*<h1>My first react project</h1>
       <h2>My second heading added by {trainerName} from institute {InstituteName()}</h2>
   <p id='parag1' className=''>My paragraph</p>*/}
+      <BigCats></BigCats>
       <ExplodingBomb></ExplodingBomb>
       <LoginForm></LoginForm>
       <h1>Third paragraph</h1>

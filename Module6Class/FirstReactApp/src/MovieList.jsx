@@ -54,7 +54,7 @@ function MoviesList() {
             <ul> {/* iterate over each movie, print the title in a list */}
                 {movieItems}
             </ul>
-            
+            <Mirza></Mirza>
         </div>
         <div>
             <button onClick={handleReverseMovies}>Reverse List</button>

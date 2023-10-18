@@ -14,6 +14,7 @@ import { BirthdayTranslator } from './BirthdayTranslator'
 import Weather from './Weather'
 import UserForm from './UserForm'
 import LoginForm from './LoginForm'
+import ExplodingBomb from './ExplodingBomb'
 
 function App() {
   const trainerName = "Mirza"
@@ -39,6 +40,7 @@ function App() {
 
   return (
           <>
+          <ExplodingBomb></ExplodingBomb>
           <LoginForm></LoginForm>
            {/* {spideyJSX}
             <ExampleComponent firstName='Mirza' Institute='IOD'>
