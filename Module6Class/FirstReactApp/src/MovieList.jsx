@@ -1,5 +1,7 @@
+import AddMovieForm from './AddMovieForm';
 import './App.css'
 import Movie from './Movie';
+import { useState } from 'react';
 function MoviesList() {
     // collection of objects representing movies
     const movies = [
@@ -23,7 +25,9 @@ function MoviesList() {
         },
     ];
 
-    const movieItems = movies.map(movie => (
+    const [currentMovies, setCurrentMovies] = useState(movies);
+
+    const movieItems = currentMovies.map(movie => (
         <Movie
         key={movie.id} // key prop is required for lists
         title={movie.title}
@@ -33,12 +37,32 @@ function MoviesList() {
         // <Movie key={movie.id} {...movie}/>
     ))
 
+    const handleReverseMovies = () => {
+        // first clone the original, so we don’t mutate it
+        let newMovies = [...currentMovies];
+        newMovies.reverse(); // 2. modify the clone
+        setCurrentMovies(newMovies); // 3. set updated clone in state
+    }
+    // add this in MoviesList component
+    const handleAddMovie = (newMovie) => {
+        newMovie.id = currentMovies.length + 1; // unreliable but succinct
+        setCurrentMovies([...currentMovies, newMovie])
+    }
     return (
+        <>
         <div className="MoviesList componentBox">
             <ul> {/* iterate over each movie, print the title in a list */}
                 {movieItems}
             </ul>
+            
         </div>
+        <div>
+            <button onClick={handleReverseMovies}>Reverse List</button>
+        </div>
+        <div>
+            <AddMovieForm onAddMovie={handleAddMovie}></AddMovieForm>
+        </div>
+        </>
     )
 }
 export default MoviesList;

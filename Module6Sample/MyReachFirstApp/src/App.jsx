@@ -6,6 +6,10 @@ import { FullName } from './FullNameComp'
 import './App.css'
 import { Callout } from './Callout'
 import MovieList from './MovieList'
+import Weather from './Weather'
+import { UserForm } from './UserForm'
+import LoginForm from './LoginForm'
+import ExplodingBomb from './ExplodingBomb'
 function App() {
   //const [count, setCount] = useState(0)
   const trainerName = 'Mirza'
@@ -18,6 +22,8 @@ function App() {
       {/*<h1>My first react project</h1>
       <h2>My second heading added by {trainerName} from institute {InstituteName()}</h2>
   <p id='parag1' className=''>My paragraph</p>*/}
+      <ExplodingBomb></ExplodingBomb>
+      <LoginForm></LoginForm>
       <h1>Third paragraph</h1>
       <br/>
       <ExampleComponent fistName='Mirza' Institute='IOD'>
@@ -31,6 +37,9 @@ function App() {
         <FullName firstName="Elon" lastName="Musk" />
       </Callout>
       <MovieList></MovieList>
+
+      <Weather></Weather>
+      <UserForm></UserForm>
     </>
   )
 }

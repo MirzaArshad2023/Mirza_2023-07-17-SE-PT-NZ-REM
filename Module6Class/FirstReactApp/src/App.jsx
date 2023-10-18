@@ -10,6 +10,10 @@ import Comment from './Comment'
 import Callout from './CallOut'
 import MoviesList from './MovieList'
 import ShowCounts from './ShowCounts'
+import { BirthdayTranslator } from './BirthdayTranslator'
+import Weather from './Weather'
+import UserForm from './UserForm'
+import LoginForm from './LoginForm'
 
 function App() {
   const trainerName = "Mirza"
@@ -35,20 +39,23 @@ function App() {
 
   return (
           <>
+          <LoginForm></LoginForm>
            {/* {spideyJSX}
             <ExampleComponent firstName='Mirza' Institute='IOD'>
                 <City><h1>City component child</h1></City>
   </ExampleComponent>*/}
             {/*<FullName firstName="Mirza" lastName="Arshad"></FullName>*/}
       {/*<ComplexComment author={comment.author} date={comment.date} text={comment.text} />*/}
-      <ShowCounts></ShowCounts>
-      <Comment author={comment.author} date={comment.date} text={comment.text}></Comment>
+      {/*<ShowCounts></ShowCounts>*/}
+      {/*<Comment author={comment.author} date={comment.date} text={comment.text}></Comment>*/}
       
-      <Callout title="Nested React Component"
+      {/*<Callout title="Nested React Component"
         message="Simple message with a fancy box applied via composition">
         <FullName firstName="Elon" lastName="Musk" />
-      </Callout>
+</Callout>*/}
       <MoviesList></MoviesList>
+      <BirthdayTranslator></BirthdayTranslator>
+      <Weather></Weather>
           </>
          );
 }
