@@ -10,21 +10,27 @@ import PostListReducer from './PostListReducer'
 import SubscribeForm from './SubscribeForm'
 import { TopRootNestedTree } from './TopRootNestedTree'
 import { UserInfoContextProvider } from './UserInfoContextProvider'
+import {Routes, Route} from 'react-router-dom'
+import { AppRoutes } from './AppRoutes'
+import { NavBar } from './NavBar'
 
 function App() {
  
   
   return (
     <>
-    <UserInfoContextProvider>
+    <NavBar></NavBar>
+    <AppRoutes></AppRoutes>
+    {/*<UserInfoContextProvider>
       <TopRootNestedTree></TopRootNestedTree>
     </UserInfoContextProvider>
     <SubscribeForm></SubscribeForm>
     <PostListReducer></PostListReducer>
-      <ReducerCounter></ReducerCounter>
-      <VideoPlayer></VideoPlayer>
-      <RefCounter></RefCounter>
-      <UseEffectDemo></UseEffectDemo>
+    <ReducerCounter></ReducerCounter>
+    <VideoPlayer></VideoPlayer>
+    <RefCounter></RefCounter>
+    <UseEffectDemo></UseEffectDemo>
+  */}
     </>
   )
 }

@@ -11,17 +11,29 @@ import VideoPlayer from './VideoPlayer'
 import ReducerCounter from './ReducerCounter'
 import PostListReducer from './PostsListsReducer'
 import SubscribeForm from './SubscribeForm'
-
+import { CompA } from './CompA'
+import { UserInfoContextProvider } from './UserInfoContextProvider'
+import MyThemeProvider, { MyThemeContext } from './MyThemeContextProvider'
+import { AppRoutes } from './AppRoutes'
+import { NavBar } from '../../../Module7Sample/ReactModule7/src/NavBar'
 function App() {
   
 
   return (
     <>
-    <SubscribeForm></SubscribeForm>
+    <NavBar></NavBar>
+    <AppRoutes></AppRoutes>
+    {/*<UserInfoContextProvider>
+      <MyThemeProvider>
+        <CompA></CompA>
+      </MyThemeProvider>
+  </UserInfoContextProvider>*/}
+    
+    {/*<SubscribeForm></SubscribeForm>
     <PostListReducer></PostListReducer>
     <ReducerCounter></ReducerCounter>
     <VideoPlayer></VideoPlayer>
-    <RefCounter></RefCounter>
+  <RefCounter></RefCounter>*/}
       {/*<Clock></Clock>*/}
       {/*<UseEffectDemo></UseEffectDemo>*/}
       {/*<ClockDisplay></ClockDisplay>
