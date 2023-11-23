@@ -13,14 +13,18 @@ import { UserInfoContextProvider } from './UserInfoContextProvider'
 import {Routes, Route} from 'react-router-dom'
 import { AppRoutes } from './AppRoutes'
 import { NavBar } from './NavBar'
+import { ThemeProvider } from "@mui/material/styles";
+import { tealTheme } from './themes/tealTheme'
 
 function App() {
  
   
   return (
     <>
-    <NavBar></NavBar>
-    <AppRoutes></AppRoutes>
+    <ThemeProvider theme={tealTheme}>{/* App.jsx components */}
+      <NavBar></NavBar>
+      <AppRoutes></AppRoutes>
+    </ThemeProvider>
     {/*<UserInfoContextProvider>
       <TopRootNestedTree></TopRootNestedTree>
     </UserInfoContextProvider>

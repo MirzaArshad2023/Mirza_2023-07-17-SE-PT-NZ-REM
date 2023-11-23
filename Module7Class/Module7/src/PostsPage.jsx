@@ -21,13 +21,13 @@ export function PostList() { // updated from slide 60, replace old version
         setSearchParams({ limit: e.target.value })
     }
     // the ? means only call map if postsData is not null
-    const postList = postsData.map((post) => (
+    const postList = postsData? postsData.map((post) => (
         <li key={post.id}>
             <Link to={"/posts/" + post.id}>
                 Post #{post.id}: {post.title}
             </Link>
         </li>
-    ));
+    )) : [];
     return (
         <>
             <ul>{postList}</ul>

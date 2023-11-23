@@ -9,6 +9,8 @@ import NavBar from './NavBar';
 import {PostList} from './PostsPage';
 import { Post } from './Post';
 import PostsPage from './PostsPage';
+import { User } from './User';
+import { ProtectedRoute } from './ProtectedRoute';
 
 export function AppRoutes(props)
 {
@@ -19,11 +21,13 @@ export function AppRoutes(props)
             </Route>
             <Route path='/About' element={<About></About>}>
             </Route>
-            <Route path='/Users' element={<NavigationLayout></NavigationLayout>}>
+            <Route path='/Users' element={<ProtectedRoute><NavigationLayout></NavigationLayout></ProtectedRoute>}>
                 <Route path='UserInfo' element={<UserInfo></UserInfo>}></Route>
                 <Route path='NewUser' element={<NewUser></NewUser>}></Route>
+                <Route path=':id' element={<User></User>}></Route>
             </Route>
             <Route path='/posts' element={<PostsPage {...props} />} >
+                
             <Route index element={<PostList />} />
             {/* dynamic param taken from route, stored in variable called id */}
             <Route path=":id" element={<Post />} />

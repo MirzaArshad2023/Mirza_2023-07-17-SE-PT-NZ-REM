@@ -21,8 +21,10 @@ function App() {
 
   return (
     <>
+    <UserInfoContextProvider>
     <NavBar></NavBar>
     <AppRoutes></AppRoutes>
+    </UserInfoContextProvider>
     {/*<UserInfoContextProvider>
       <MyThemeProvider>
         <CompA></CompA>
